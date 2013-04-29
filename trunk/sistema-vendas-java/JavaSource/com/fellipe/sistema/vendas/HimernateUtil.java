@@ -1,7 +1,8 @@
 package com.fellipe.sistema.vendas;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import org.hibernate.cfg.AnnotationConfiguration;
+
 
 public class HimernateUtil {
 
@@ -9,7 +10,8 @@ public class HimernateUtil {
 
 	private static SessionFactory buildSessionFactory() {
 		try {
-			Configuration cfg = new Configuration();
+			//ao invés de usar a classe Configuration, usei a AnnotationConfiguration que resolveu o problema
+			AnnotationConfiguration cfg = new AnnotationConfiguration();
 			cfg.configure("hibernate.cfg.xml");
 			return cfg.buildSessionFactory();
 		} catch (Throwable e) {
