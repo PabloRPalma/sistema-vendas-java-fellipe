@@ -1,13 +1,13 @@
 import org.hibernate.Session;
 
-import com.fellipe.sistema.vendas.HimernateUtil;
+import com.fellipe.sistema.vendas.HibernateUtil;
 
 public class Conecta {
 
 	public static void main(String[] args) {
 		Session sessao = null;
 		try {
-			sessao = HimernateUtil.getSession().openSession();
+			sessao = HibernateUtil.getSession().openSession();
 			System.out.println("Conectou !");
 
 		} finally {
