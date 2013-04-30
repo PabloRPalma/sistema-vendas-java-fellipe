@@ -4,7 +4,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 
-public class HimernateUtil {
+public class HibernateUtil {
 
 	private static final SessionFactory session = buildSessionFactory();
 
